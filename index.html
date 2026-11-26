@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento de Motores Industriais - v1.0.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho do Sistema (Trecho 1 e 5) -->
+        <header class="header">
+            <div>
+                <h1>Monitoramento de Motores Industriais</h1>
+                <span class="badge-versao">v1.0.0</span>
+            </div>
+            <div class="timestamp">
+                <strong>Data/Hora da leitura:</strong> 26/11/2026 13:20:00
+            </div>
+        </header>
+
+        <!-- Barra de Limites Operacionais (Trecho 1) -->
+        <section class="limites-bar">
+            <span><strong>Limites Operacionais:</strong></span>
+            <span>Temp. Máx: <strong>80.0 °C</strong></span>
+            <span>Corrente Máx: <strong>18.5 A</strong></span>
+            <span>Vibração Máx: <strong>4.5 mm/s</strong></span>
+            <span>RPM: <strong>1400 - 1800</strong></span>
+        </section>
+
+        <!-- Cards de Estatísticas Gerais (Trecho 4) -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-label">Total de Motores</span>
+                <strong class="stat-value">4</strong>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Temperatura Média</span>
+                <strong class="stat-value">72.58 °C</strong>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Corrente Média</span>
+                <strong class="stat-value">15.70 A</strong>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Potência Total</span>
+                <strong class="stat-value">31.50 kW</strong>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Motor Mais Quente</span>
+                <strong class="stat-value text-critico">MTR-02</strong>
+            </div>
+        </section>
+
+        <!-- Painel de Leituras e Alertas dos Motores (Trechos 3 e 5) -->
+        <section class="motores-section">
+            <h2>Leituras em Tempo Real</h2>
+            <div class="motores-grid">
+                
+                <!-- MTR-01: NORMAL -->
+                <article class="motor-card border-normal">
+                    <div class="motor-header">
+                        <div>
+                            <h3>MTR-01</h3>
+                            <span class="setor">Setor: Estamparia</span>
+                        </div>
+                        <span class="status status-normal">NORMAL</span>
+                    </div>
+                    <ul class="metricas">
+                        <li><span>Temperatura:</span> <strong>68.4 °C</strong></li>
+                        <li><span>Corrente:</span> <strong>14.2 A</strong></li>
+                        <li><span>Vibração:</span> <strong>2.1 mm/s</strong></li>
+                        <li><span>Rotação:</span> <strong>1750 RPM</strong></li>
+                        <li><span>Potência:</span> <strong>7.5 kW</strong></li>
+                    </ul>
+                    <div class="alertas-box ok">
+                        ✓ Nenhuma anomalia detectada
+                    </div>
+                </article>
+
+                <!-- MTR-02: CRITICO -->
+                <article class="motor-card border-critico">
+                    <div class="motor-header">
+                        <div>
+                            <h3>MTR-02</h3>
+                            <span class="setor">Setor: Usinagem</span>
+                        </div>
+                        <span class="status status-critico">CRÍTICO</span>
+                    </div>
+                    <ul class="metricas">
+                        <li class="alerta-item"><span>Temperatura:</span> <strong>84.7 °C</strong></li>
+                        <li class="alerta-item"><span>Corrente:</span> <strong>19.3 A</strong></li>
+                        <li class="alerta-item"><span>Vibração:</span> <strong>5.2 mm/s</strong></li>
+                        <li><span>Rotação:</span> <strong>1690 RPM</strong></li>
+                        <li><span>Potência:</span> <strong>11.0 kW</strong></li>
+                    </ul>
+                    <div class="alertas-box perigo">
+                        <strong>Alertas (3):</strong>
+                        <ul>
+                            <li>Superaquecimento (84.7 °C)</li>
+                            <li>Sobrecorrente (19.3 A)</li>
+                            <li>Vibração elevada (5.2 mm/s)</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- MTR-03: ATENCAO -->
+                <article class="motor-card border-atencao">
+                    <div class="motor-header">
+                        <div>
+                            <h3>MTR-03</h3>
+                            <span class="setor">Setor: Bobinagem</span>
+                        </div>
+                        <span class="status status-atencao">ATENÇÃO</span>
+                    </div>
+                    <ul class="metricas">
+                        <li><span>Temperatura:</span> <strong>76.2 °C</strong></li>
+                        <li><span>Corrente:</span> <strong>17.8 A</strong></li>
+                        <li class="alerta-item"><span>Vibração:</span> <strong>4.7 mm/s</strong></li>
+                        <li><span>Rotação:</span> <strong>1520 RPM</strong></li>
+                        <li><span>Potência:</span> <strong>5.5 kW</strong></li>
+                    </ul>
+                    <div class="alertas-box aviso">
+                        <strong>Alertas (1):</strong>
+                        <ul>
+                            <li>Vibração elevada (4.7 mm/s)</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- MTR-04: NORMAL -->
+                <article class="motor-card border-normal">
+                    <div class="motor-header">
+                        <div>
+                            <h3>MTR-04</h3>
+                            <span class="setor">Setor: Pintura</span>
+                        </div>
+                        <span class="status status-normal">NORMAL</span>
+                    </div>
+                    <ul class="metricas">
+                        <li><span>Temperatura:</span> <strong>61.0 °C</strong></li>
+                        <li><span>Corrente:</span> <strong>11.5 A</strong></li>
+                        <li><span>Vibração:</span> <strong>1.8 mm/s</strong></li>
+                        <li><span>Rotação:</span> <strong>1780 RPM</strong></li>
+                        <li><span>Potência:</span> <strong>7.5 kW</strong></li>
+                    </ul>
+                    <div class="alertas-box ok">
+                        ✓ Nenhuma anomalia detectada
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Plano de Manutenção Preventiva (Trecho 6) -->
+        <section class="manutencao-section">
+            <h2>Plano de Manutenção Preventiva</h2>
+            <div class="manutencao-grid">
+                <div class="plano-card plano-critico">
+                    <h3>Parada Imediata (CRÍTICO)</h3>
+                    <p>Intervenção urgente necessária para evitar falha grave.</p>
+                    <div class="tags">
+                        <span class="tag-motor">MTR-02 (Usinagem - 3 ocorrências)</span>
+                    </div>
+                </div>
+
+                <div class="plano-card plano-atencao">
+                    <h3>Inspeção Programada (ATENÇÃO)</h3>
+                    <p>Agendar verificação técnica no próximo turno.</p>
+                    <div class="tags">
+                        <span class="tag-motor">MTR-03 (Bobinagem - 1 ocorrência)</span>
+                    </div>
+                </div>
+
+                <div class="plano-card plano-normal">
+                    <h3>Operação Estável (NORMAL)</h3>
+                    <p>Equipamentos operando dentro dos parâmetros normais.</p>
+                    <div class="tags">
+                        <span class="tag-motor">MTR-01 (Estamparia)</span>
+                        <span class="tag-motor">MTR-04 (Pintura)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
